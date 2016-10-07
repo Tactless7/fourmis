@@ -9,15 +9,14 @@ var height;
 
 function createTable(x, y){
 	for (var i = 1; i <= y; i++) {
-		$('table').append('<tr data-row ='+i+'></tr>');
+		$('table').append('<tr data-row ="'+i+'""></tr>');
+		for (var j = 1; j <= x; j++){
+			$('tr[data-row="'+i+'"]').append('<td data-row="'+i+'"data-column="'+j+'"></td>');
+		}
 	}
-	for (var i = 1; i <= x; i++){
-		$('tr').append('<td></td>');
-	}
-
 }
 
-
+function randomCase
 
 
 $('button').on('click', function(){
